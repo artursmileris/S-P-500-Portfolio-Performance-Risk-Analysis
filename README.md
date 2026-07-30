@@ -40,38 +40,54 @@ The goal is to showcase data engineering, SQL, Python analytics, and basic quant
 
 | Metric                | Top 10 Portfolio | SPY    |
 |-----------------------|------------------|--------|
-| Ann. Return (%)       | 18.08%            | 14.80%  |
-| Ann. Volatility (%)   | 32.67%            | 16.80%  |
+| Ann. Return (%)       | 18.08            | 14.80  |
+| Ann. Volatility (%)   | 32.67            | 16.80  |
 | Sharpe Ratio          | 0.49             | 0.76   |
 | Sortino Ratio         | 0.74             | 1.05   |
-| Max Drawdown (%)      | -55.71%           | -24.50% |
+| Max Drawdown (%)      | -55.71           | -24.50 |
 
 The Top 10 portfolio delivered higher absolute returns but with substantially higher volatility and deeper drawdowns, resulting in weaker risk-adjusted performance versus SPY.
 
 ---
 
-## Methodology
+## Step-by-Step Pipeline
 
-### 1. Data Pipeline
-1. Scrape S&P 500 constituents (and add SPY as the benchmark) from Wikipedia.
-2. Load metadata into `dim_assets`.
-3. Bulk-download historical adjusted prices via `yfinance` (2016 onwards) and store in `fact_daily_prices`.
-4. Compute daily percentage returns from adjusted close prices and store in `fact_daily_returns`.
+### Step 0 – Project Setup
+- Install required packages (`yfinance`, `pandas`, `numpy`, `sqlalchemy`, `matplotlib`, `seaborn`, etc.)
+- Import libraries and configure logging for pipeline transparency
 
-### 2. Point-in-Time Portfolio Construction
-- Ranking window: **2016-01-01 → 2020-12-31**
-- Stocks ranked by total return using first and last available adjusted close in the window.
-- Only stocks that traded near the start of the ranking period are considered.
-- Top 10 selected tickers are held as an **equal-weighted** portfolio.
-- Evaluation window: **2021-01-01 → present** (true out-of-sample).
+### Step 1 – Database Schema & Architecture
+- Create a SQLite engine (`sp500_db_engine.db`)
+- Define a star-schema DDL:
+  - `dim_assets` – ticker, company name, sector, industry
+  - `fact_daily_prices` – OHLCV + adjusted close (primary key: ticker + date)
+  - `fact_daily_returns` – daily percentage returns
 
-### 3. Risk Metrics
-- Annualised Return & Volatility (252 trading days)
-- Sharpe Ratio (risk-free rate = 2%)
-- Sortino Ratio (downside volatility only)
-- Maximum Drawdown
+### Step 2 – Metadata Extraction & Ingestion
+- Scrape current S&P 500 constituents from Wikipedia (BeautifulSoup + pandas)
+- Standardise tickers (e.g. `BRK.B` → `BRK-B`) for yfinance compatibility
+- Append SPY as the benchmark instrument
+- Load cleaned metadata into `dim_assets` (clear-and-reload pattern for safe re-runs)
 
-### Why SPY instead of ^GSPC?
+### Step 3 – Historical Price Extraction
+- Retrieve all tickers from `dim_assets`
+- Bulk-download daily OHLCV data from 2016 onwards via `yfinance`
+- Reshape the MultiIndex output into a flat relational format
+- Map columns to the `fact_daily_prices` schema and load into SQLite
+
+### Step 4 – Daily Returns Calculation
+- Query adjusted close prices ordered by ticker and date
+- Compute percentage change (`pct_change`) within each ticker group
+- Drop the first NaN row per ticker and insert results into `fact_daily_returns`
+
+### Step 5 – Point-in-Time Top 10 Portfolio & Risk Analysis
+- **Ranking window (2016–2020):** SQL window functions calculate total return using first and last available adjusted close; filter for stocks that traded near the start of the period; select Top 10
+- **Test window (2021–present):** Pull daily returns for the Top 10 + SPY
+- Construct an equal-weighted portfolio with dynamic rebalancing (NaNs skipped)
+- Calculate risk metrics: Annualised Return, Volatility, Sharpe, Sortino, Maximum Drawdown
+- Generate a side-by-side comparison table and drawdown chart versus SPY
+
+### Why SPY instead of ^GSPC for the benchmark?
 Individual stock returns use **adjusted close** prices (dividends + splits included). SPY also reflects total return, providing a fair like-for-like comparison. The pure price index ^GSPC would understate the benchmark.
 
 ---
