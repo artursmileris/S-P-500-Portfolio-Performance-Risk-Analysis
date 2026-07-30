@@ -8,12 +8,12 @@ End-to-end data engineering and quantitative analysis pipeline that builds a poi
 
 This project demonstrates a complete workflow covering:
 
-- **Data extraction** – scraping the current S&P 500 constituent list from Wikipedia
-- **Data modelling** – storing company metadata and historical OHLCV prices in a SQLite star schema
-- **Transformation** – calculating daily adjusted returns
-- **Portfolio construction** – ranking stocks on 2016–2020 total return (point-in-time) and selecting the Top 10
-- **Out-of-sample evaluation** – measuring performance and risk from 2021 to present
-- **Benchmarking & visualisation** – comparing the portfolio against SPY and charting drawdowns
+- **Data extraction** - scraping the current S&P 500 constituent list from Wikipedia
+- **Data modelling** - storing company metadata and historical OHLCV prices in a SQLite star schema
+- **Transformation** - calculating daily adjusted returns
+- **Portfolio construction** - ranking stocks on 2016–2020 total return (point-in-time) and selecting the Top 10
+- **Out-of-sample evaluation** - measuring performance and risk from 2021 to present
+- **Benchmarking & visualisation** - comparing the portfolio against SPY and charting drawdowns
 
 The goal is to showcase data engineering, SQL, Python analytics, and basic quantitative finance skills while applying a clean methodological framework that avoids look-ahead bias in stock selection.
 
