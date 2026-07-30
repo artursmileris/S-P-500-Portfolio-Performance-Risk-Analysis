@@ -153,12 +153,15 @@ The notebook will:
 
 If you prefer to run the notebook on your own machine:
 
-```bash
+```
+bash
 git clone https://github.com/<your-username>/sp500-performance-risk-analysis.git
 cd sp500-performance-risk-analysis
 
 python -m venv venv
 source venv/bin/activate          # Windows: venv\Scripts\activate
+```
+
 ---
 
 ## Requirements
