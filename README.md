@@ -111,7 +111,7 @@ Results should be interpreted as an **exploratory analysis**, not a production-r
 | Data Storage      | SQLite + SQLAlchemy                        |
 | Analysis          | pandas, NumPy                              |
 | Visualisation     | matplotlib, seaborn                        |
-| Environment       | Jupyter Notebook                           |
+| Environment       | Google Colab (Jupyter Notebook)            |
 
 ---
 
@@ -132,29 +132,16 @@ sp500-performance-risk-analysis/
 
 ## Getting Started
 
-### Prerequisites
-- Python 3.9+
-- Jupyter Notebook or JupyterLab
+The easiest way to run this project is in **Google Colab** (no local installation required).
 
-### Installation
+### Option 1 – Google Colab (recommended)
 
-```bash
-git clone https://github.com/<your-username>/sp500-performance-risk-analysis.git
-cd sp500-performance-risk-analysis
+1. Open [Google Colab](https://colab.research.google.com/).
+2. Upload the notebook (`notebooks/S&P_500_Performance_Risk_Analysis.ipynb`) or open it directly from the GitHub repository.
+3. Run the first cell to install the required packages (`yfinance`, `pandas`, `sqlalchemy`, etc.).
+4. Execute the remaining cells in order.
 
-python -m venv venv
-source venv/bin/activate          # Windows: venv\Scripts\activate
-
-pip install -r requirements.txt
-```
-
-### Run the Analysis
-
-```bash
-jupyter notebook notebooks/S&P_500_Performance_Risk_Analysis.ipynb
-```
-
-Execute the cells in order. The notebook will:
+The notebook will:
 1. Create the SQLite database and schema
 2. Scrape constituents and download price history
 3. Rank the Top 10 and compute out-of-sample metrics
@@ -162,6 +149,16 @@ Execute the cells in order. The notebook will:
 
 > **Runtime note:** The initial `yfinance` bulk download for ~500 tickers can take several minutes depending on network conditions.
 
+### Option 2 – Local setup (optional)
+
+If you prefer to run the notebook on your own machine:
+
+```bash
+git clone https://github.com/<your-username>/sp500-performance-risk-analysis.git
+cd sp500-performance-risk-analysis
+
+python -m venv venv
+source venv/bin/activate          # Windows: venv\Scripts\activate
 ---
 
 ## Requirements
