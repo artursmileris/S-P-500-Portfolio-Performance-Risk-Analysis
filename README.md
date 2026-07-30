@@ -23,7 +23,7 @@ The goal is to showcase data engineering, SQL, Python analytics, and basic quant
 
 ### Top 10 Stocks (ranked on 2016–2020 total return)
 
-![Top 10 Stock Out-of-Sample Performance ](assets/screenshots/Maximum_drawdown_over_time_screenshot.png)
+![Top 10 Stock Out-of-Sample Performance ](assets/screenshots/Point-In-Time_benchmark_screenshot.png)
 
 | Rank | Ticker | Company                  | Sector                     | Total Return 2016–2020 |
 |------|--------|--------------------------|----------------------------|------------------------|
@@ -39,6 +39,8 @@ The goal is to showcase data engineering, SQL, Python analytics, and basic quant
 | 10   | PODD   | Insulet Corporation      | Health Care                | 589.77%                |
 
 ### Risk & Performance Metrics (Test Period: 2021 onwards)
+
+![Max_Drawdown_and_Volatility_Metrics](assets/screenshots/Maximum_drawdown_over_time_screenshot.png)
 
 | Metric                | Top 10 Portfolio | SPY    |
 |-----------------------|------------------|--------|
