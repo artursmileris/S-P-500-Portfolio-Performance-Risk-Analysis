@@ -23,8 +23,6 @@ The goal is to showcase data engineering, SQL, Python analytics, and basic quant
 
 ### Top 10 Stocks (ranked on 2016–2020 total return)
 
-![Top 10 Stock Out-of-Sample Performance ](assets/screenshots/Point-In-Time_benchmark_screenshot.png)
-
 | Rank | Ticker | Company                  | Sector                     | Total Return 2016–2020 |
 |------|--------|--------------------------|----------------------------|------------------------|
 | 1    | AMD    | Advanced Micro Devices   | Information Technology     | 3210.83%               |
@@ -38,9 +36,9 @@ The goal is to showcase data engineering, SQL, Python analytics, and basic quant
 | 9    | IDXX   | Idexx Laboratories       | Health Care                | 602.85%                |
 | 10   | PODD   | Insulet Corporation      | Health Care                | 589.77%                |
 
-### Risk & Performance Metrics (Test Period: 2021 onwards)
+![Top 10 Stock Out-of-Sample Performance ](assets/screenshots/Point-In-Time_benchmark_screenshot.png)
 
-![Max_Drawdown_and_Volatility_Metrics](assets/screenshots/Maximum_drawdown_over_time_screenshot.png)
+### Risk & Performance Metrics (Test Period: 2021 onwards)
 
 | Metric                | Top 10 Portfolio | SPY    |
 |-----------------------|------------------|--------|
@@ -49,6 +47,8 @@ The goal is to showcase data engineering, SQL, Python analytics, and basic quant
 | Sharpe Ratio          | 0.49             | 0.76   |
 | Sortino Ratio         | 0.74             | 1.05   |
 | Max Drawdown (%)      | -55.71           | -24.50 |
+
+![Max_Drawdown_and_Volatility_Metrics](assets/screenshots/Maximum_drawdown_over_time_screenshot.png)
 
 The Top 10 portfolio delivered higher absolute returns but with substantially higher volatility and deeper drawdowns, resulting in weaker risk-adjusted performance versus SPY.
 
