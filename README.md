@@ -40,11 +40,11 @@ The goal is to showcase data engineering, SQL, Python analytics, and basic quant
 
 | Metric                | Top 10 Portfolio | SPY    |
 |-----------------------|------------------|--------|
-| Ann. Return (%)       | 18.08            | 14.80  |
-| Ann. Volatility (%)   | 32.67            | 16.80  |
+| Ann. Return (%)       | 18.08%            | 14.80%  |
+| Ann. Volatility (%)   | 32.67%            | 16.80%  |
 | Sharpe Ratio          | 0.49             | 0.76   |
 | Sortino Ratio         | 0.74             | 1.05   |
-| Max Drawdown (%)      | -55.71           | -24.50 |
+| Max Drawdown (%)      | -55.71%           | -24.50% |
 
 The Top 10 portfolio delivered higher absolute returns but with substantially higher volatility and deeper drawdowns, resulting in weaker risk-adjusted performance versus SPY.
 
