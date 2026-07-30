@@ -164,7 +164,7 @@ source venv/bin/activate          # Windows: venv\Scripts\activate
 
 ---
 
-## Requirements
+## Python Library Requirements
 
 ```
 yfinance
