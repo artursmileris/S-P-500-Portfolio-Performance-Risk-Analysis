@@ -23,6 +23,8 @@ The goal is to showcase data engineering, SQL, Python analytics, and basic quant
 
 ### Top 10 Stocks (ranked on 2016–2020 total return)
 
+![Top 10 Stock Out-of-Sample Performance ](assets/screenshots/Maximum drawdown over time screenshot.png)
+
 | Rank | Ticker | Company                  | Sector                     | Total Return 2016–2020 |
 |------|--------|--------------------------|----------------------------|------------------------|
 | 1    | AMD    | Advanced Micro Devices   | Information Technology     | 3210.83%               |
