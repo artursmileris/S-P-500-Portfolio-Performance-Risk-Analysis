@@ -23,7 +23,7 @@ The goal is to showcase data engineering, SQL, Python analytics, and basic quant
 
 ### Top 10 Stocks (ranked on 2016–2020 total return)
 
-![Top 10 Stock Out-of-Sample Performance ](assets/screenshots/Maximum drawdown over time screenshot.png)
+![Top 10 Stock Out-of-Sample Performance ](assets/screenshots/Maximum_drawdown_over_time_screenshot.png)
 
 | Rank | Ticker | Company                  | Sector                     | Total Return 2016–2020 |
 |------|--------|--------------------------|----------------------------|------------------------|
