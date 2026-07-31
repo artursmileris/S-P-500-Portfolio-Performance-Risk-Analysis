@@ -125,8 +125,9 @@ Results should be interpreted as an **exploratory analysis**, not a production-r
 S-P-500-Portfolio-Performance-Risk-Analysis/
 ├── README.md
 ├── .gitignore
-└── notebooks/
+└── assets/
     └── S&P_500_Performance_Risk_Analysis.ipynb
+    └── 
 ```
 
 > **Note:** The SQLite database (`sp500_db_engine.db`) is generated at runtime and intentionally excluded from version control.
