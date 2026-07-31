@@ -1,6 +1,6 @@
 # S&P 500 Portfolio Performance & Risk Analysis
 
-End-to-end data engineering and quantitative analysis pipeline that builds a point-in-time Top 10 portfolio from S&P 500 constituents, evaluates its out-of-sample performance (2021 onwards), and compares risk-adjusted metrics against the SPY benchmark.
+End-to-end data engineering and math-based analysis pipeline that builds a point-in-time Top 10 portfolio from S&P 500 constituents, evaluates its out-of-sample performance (2021 onwards), and compares risk-adjusted metrics against the SPY benchmark.
 
 ---
 
