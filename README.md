@@ -50,7 +50,7 @@ The goal is to showcase data engineering, SQL, Python analytics, and basic quant
 
 ![Max_Drawdown_and_Volatility_Metrics](assets/screenshots/Maximum_drawdown_over_time_screenshot.png)
 
-The Top 10 portfolio delivered higher absolute returns but with substantially higher volatility and deeper drawdowns, resulting in weaker risk-adjusted performance versus SPY.
+The Top 10 portfolio delivered higher returns but with substantially higher volatility and deeper drawdowns, resulting in weaker risk-adjusted performance versus SPY.
 
 ---
 
