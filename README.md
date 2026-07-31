@@ -36,9 +36,9 @@ The goal is to showcase data engineering, SQL, Python analytics, and basic quant
 | 9    | IDXX   | Idexx Laboratories       | Health Care                | 602.85%                |
 | 10   | PODD   | Insulet Corporation      | Health Care                | 589.77%                |
 
-![Top 10 Stock Out-of-Sample Performance ](assets/Point-In-Time_benchmark_screenshot.png)
+### Performance & Risk Metrics (Test Period: 2021 onwards)
 
-### Risk & Performance Metrics (Test Period: 2021 onwards)
+![Top 10 Stock Out-of-Sample Performance ](assets/Point-In-Time_benchmark_screenshot.png)
 
 | Metric                | Top 10 Portfolio | SPY    |
 |-----------------------|------------------|--------|
