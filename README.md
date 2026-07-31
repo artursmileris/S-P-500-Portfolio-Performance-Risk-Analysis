@@ -15,7 +15,7 @@ This project demonstrates a complete workflow covering:
 - **Out-of-sample evaluation** - measuring performance and risk from 2021 to present
 - **Benchmarking & visualisation** - comparing the portfolio against SPY and charting drawdowns
 
-The goal is to showcase data engineering, SQL, Python analytics, and basic quantitative finance skills while applying a clean methodological framework that avoids look-ahead bias in stock selection.
+The goal is to showcase data engineering, SQL, Python analytics, and basic quantitative finance skills while applying a clean methodological framework that mitigates look-ahead bias in stock selection.
 
 ---
 
