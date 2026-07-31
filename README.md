@@ -142,8 +142,7 @@ The easiest way to run this project is in **Google Colab** (no local installatio
 
 1. Open [Google Colab](https://colab.research.google.com/).
 2. Upload the notebook (`notebooks/S&P_500_Performance_Risk_Analysis.ipynb`) or open it directly from the GitHub repository.
-3. Run the first cell to install the required packages (`yfinance`, `pandas`, `sqlalchemy`, etc.).
-4. Execute the remaining cells in order.
+3. Execute the cells in descending order.
 
 The notebook will:
 1. Create the SQLite database and schema
