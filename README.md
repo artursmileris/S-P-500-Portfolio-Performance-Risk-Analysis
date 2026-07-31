@@ -122,9 +122,8 @@ Results should be interpreted as an **exploratory analysis**, not a production-r
 ## Repository Structure
 
 ```
-sp500-performance-risk-analysis/
+S-P-500-Portfolio-Performance-Risk-Analysis/
 ├── README.md
-├── requirements.txt
 ├── .gitignore
 └── notebooks/
     └── S&P_500_Performance_Risk_Analysis.ipynb
