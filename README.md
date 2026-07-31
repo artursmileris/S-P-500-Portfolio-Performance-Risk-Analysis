@@ -191,4 +191,4 @@ A ready-to-use `requirements.txt` is included in the repository.
 - Alternative ranking signals (momentum, volatility-adjusted returns, fundamental screens)
 - Transaction cost modelling and realistic rebalancing schedules
 - Multi-factor portfolio construction
-- Interactive dashboard (Streamlit / Dash)
+- Interactive dashboard
