@@ -36,7 +36,7 @@ The goal is to showcase data engineering, SQL, Python analytics, and basic quant
 | 9    | IDXX   | Idexx Laboratories       | Health Care                | 602.85%                |
 | 10   | PODD   | Insulet Corporation      | Health Care                | 589.77%                |
 
-![Top 10 Stock Out-of-Sample Performance ](assets/screenshots/Point-In-Time_benchmark_screenshot.png)
+![Top 10 Stock Out-of-Sample Performance ](assets/Point-In-Time_benchmark_screenshot.png)
 
 ### Risk & Performance Metrics (Test Period: 2021 onwards)
 
@@ -48,7 +48,7 @@ The goal is to showcase data engineering, SQL, Python analytics, and basic quant
 | Sortino Ratio         | 0.74             | 1.05   |
 | Max Drawdown (%)      | -55.71           | -24.50 |
 
-![Max_Drawdown_and_Volatility_Metrics](assets/screenshots/Maximum_drawdown_over_time_screenshot.png)
+![Max_Drawdown_and_Volatility_Metrics](assets/Maximum_drawdown_over_time_screenshot.png)
 
 The Top 10 portfolio delivered higher returns but with substantially higher volatility and deeper drawdowns, resulting in weaker risk-adjusted performance versus SPY.
 
@@ -126,8 +126,8 @@ S-P-500-Portfolio-Performance-Risk-Analysis/
 ├── README.md
 ├── .gitignore
 └── assets/
-    └── S&P_500_Performance_Risk_Analysis.ipynb
-    └── 
+    └── Point-In-Time_benchmark_screenshot.png
+    └── Maximum_drawdown_over_time_screenshot.png
 ```
 
 > **Note:** The SQLite database (`sp500_db_engine.db`) is generated at runtime and intentionally excluded from version control.
